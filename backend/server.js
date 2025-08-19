@@ -45,6 +45,10 @@ app.delete("/todos/:id", (req, res) => {
   res.status(204).end();
 });
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Todo API");
+});
+
 // Start server
 app.listen(PORT, () => {
   console.log(`Todo backend running at http://localhost:${PORT}`);
